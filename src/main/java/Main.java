@@ -72,16 +72,13 @@ public class Main {
 
 
 
-        calculateAddButon.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        calculateAddButon.addActionListener((e)-> {
             try {
                 Vector vector1 = new Vector(Integer.parseInt(vector1TextX.getText()), Integer.parseInt(vector1TextY.getText()), Integer.parseInt(vector1TextX1.getText()),
                         Integer.parseInt(vector1TextY1.getText()));
 
                 Vector vector2 = new Vector(Integer.parseInt(vector2TextX.getText()), Integer.parseInt(vector2TextY.getText()), Integer.parseInt(vector2TextX1.getText()),
                         Integer.parseInt(vector2TextY1.getText()));
-
 
 
             Vector vector3;
@@ -91,12 +88,10 @@ public class Main {
                                             {
                 logger.info("Exceptie la adunare "+n);
             }
-            }
+
         });
 
-        calculateDiffButon.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        calculateDiffButon.addActionListener((e)-> {
                 try {
                     Vector vector1 = new Vector(Integer.parseInt(vector1TextX.getText()), Integer.parseInt(vector1TextY.getText()), Integer.parseInt(vector1TextX1.getText()),
                             Integer.parseInt(vector1TextY1.getText()));
@@ -112,7 +107,7 @@ public class Main {
                     logger.info("Exceptie la scadere "+n);
                 }
 
-            }
+
         });
         jFrame.setSize(200,200);
 
